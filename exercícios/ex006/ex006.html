@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Dom</title>
+    <style>
+        div#area {
+            font: normal 20px arial;
+            background-color: rgb(85, 145, 26);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+             
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+    <script>
+        function clicar() {
+            var area = window.document.getElementById('area')//O getElementById fez a ligação de atraves do ID.
+            area.innerText = 'Clicou!' //Significa que vai mudar o conteudo de 'area' para clicou.
+            area.style.backgroundColor = 'red'
+        }
+
+        function entrar() {
+            var area = window.document.getElementById('area')
+            area.innerText = 'Entrou!'
+            area.style.backgroundColor = 'blue'
+        } 
+
+        function sair() {
+            var area = window.document.getElementById('area')
+            area.innerText = 'Saiu!'
+            area.style.backgroundColor = 'green'
+        }
+    </script>
+</body>
+</html>
